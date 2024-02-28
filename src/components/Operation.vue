@@ -28,21 +28,12 @@ function onChange() {
 
 function calculate() {
   let valid = true;
-  switch (operation.value.arity) {
-    case 1: {
-      if (!value2.value) {
-        alert("the value can not be empty");
-        valid = false;
-        break;
-      }
-    }
-    case 2: {
-      if (!value1.value || !value2.value) {
-        alert("the values can not be empty");
-        valid = false;
-        break;
-      }
-    }
+  if (operation.value.arity == 1 && !value2.value) {
+    alert("the value can not be empty");
+    valid = false;
+  } else if (operation.value.arity == 2 && (!value1.value || !value2.value)) {
+    alert("the values can not be empty");
+    valid = false;
   }
   if (!valid) {
     return;

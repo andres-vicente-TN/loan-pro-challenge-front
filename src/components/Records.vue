@@ -2,18 +2,11 @@
 import { ref, reactive, computed, watch } from "vue";
 
 const names = reactive([
-  "Emil, Hans",
-  "Mustermann, Max",
-  "Tisch, Roman",
-  "Emil, Hans",
-  "Mustermann, Max",
-  "Tisch, Roman",
-  "Emil, Hans",
-  "Mustermann, Max",
-  "Tisch, Roman",
-  "Emil, Hans",
-  "Mustermann, Max",
-  "Tisch, Roman",
+  "1, 1 + 1 = 2",
+  "2, 4 - 0.5 = 3.5",
+  "3, sqrt(4) = 2",
+  "4, 10 / 2 = 5",
+  "5, random string = PCPJARVCMO",
 ]);
 const selected = ref("");
 const prefix = ref("");

@@ -3,7 +3,6 @@ import { ref, type Ref } from "vue";
 import { isLogged, user } from "../common";
 
 function logout() {
-  alert("logout " + user.value);
   isLogged.value = false;
 }
 </script>

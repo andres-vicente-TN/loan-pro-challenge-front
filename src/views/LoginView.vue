@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import { ref, type Ref } from "vue";
-import { isLogged, user } from "../common";
+import { isLogged, user, type OperationModel } from "../common";
+// import axios from "axios";
 
 const password: Ref<String> = ref("pass");
 
-function login() {
-  alert(isLogged + "login " + user.value + ":" + password.value);
+async function login() {
+  // try { TODO: Add API call
+  //   const { data } = await axios.get("http://localhost:3000/api/v1/costs/", {
+  //     headers: {
+  //       Authorization: `Basic ${btoa(user.value + ":" + password.value)}`
+  //     },
+  //   });
+  //   alert(data);
+  // } catch (error) {
+  //   alert(error);
+  // }
   isLogged.value = true;
 }
 </script>
