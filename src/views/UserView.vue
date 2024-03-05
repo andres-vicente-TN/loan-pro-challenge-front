@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
-import { isLogged, user } from "../common";
-import Operation from "../components/Operation.vue";
-import Records from "../components/Records.vue";
+import { isLogged, user, loadBalance, balance } from "../common";
+import Operation from "../components/Operations.vue";
 
-const balance: number = 15;
+loadBalance();
 </script>
 
 <template>
@@ -16,8 +14,6 @@ const balance: number = 15;
     </div>
     <hr />
     <Operation />
-    <hr />
-    <Records />
   </div>
 </template>
 
@@ -35,3 +31,4 @@ hr {
   margin-top: 2em;
 }
 </style>
+../components/Operations.vue
